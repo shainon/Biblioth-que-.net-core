@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioheque .net core", "Biblioheque .net core\Biblioheque .net core.csproj", "{E9D25950-205B-44E4-947F-8297FDBE67DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeatLib", "NeatLib\NeatLib.csproj", "{D3983F97-F00F-4121-BB3A-3CFDD98237CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9D25950-205B-44E4-947F-8297FDBE67DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9D25950-205B-44E4-947F-8297FDBE67DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9D25950-205B-44E4-947F-8297FDBE67DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9D25950-205B-44E4-947F-8297FDBE67DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3983F97-F00F-4121-BB3A-3CFDD98237CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3983F97-F00F-4121-BB3A-3CFDD98237CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3983F97-F00F-4121-BB3A-3CFDD98237CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3983F97-F00F-4121-BB3A-3CFDD98237CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5062140-0C26-4731-AF92-35FB1449DF57}
+	EndGlobalSection
+EndGlobal
