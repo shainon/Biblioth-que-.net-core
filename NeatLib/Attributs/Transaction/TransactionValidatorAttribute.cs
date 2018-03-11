@@ -80,11 +80,11 @@ namespace NeatLib.Attributs.Transaction
             else if (!_session.Keys.Any(x => x == (string)context.RouteData.Values["guid"]))
             {
                 //session expiré
-                if(!this._session.Keys.Any())
-                    this.
+                if (!this._session.Keys.Any())
+                    ;
                 preparerTransaction(context);
             }
-            //f5 ou accès depuis un favory ou taper a bras
+            //f5, accès depuis un favory, ou taper a bras ou depuis un autre site
             else if ((string.IsNullOrWhiteSpace(referer) || !referer.Contains(context.HttpContext.Request.Host.Host))
                      && this._tempData["guid"] == null)
             {
@@ -115,9 +115,9 @@ namespace NeatLib.Attributs.Transaction
 
                 if (Math.Abs(lastId - currentId) > 1)
                 {
-                    var stepFirst = transactionStepList.First();
-                    context.Result = new RedirectResult(PreparerURL(guid, this._transactionName, stepFirst.Area, stepFirst.ControllerName, transactionStepList.First().ActionName), true);
-                    last_step = stepFirst.Name;
+                    var steplast = transactionStepList.Single(x => x.Name == last_step);
+                    context.Result = new RedirectResult(PreparerURL(guid, this._transactionName, steplast.Area, steplast.ControllerName, steplast.ActionName), true);
+                    last_step = steplast.Name;
                 }
                 else
                 {
@@ -127,7 +127,7 @@ namespace NeatLib.Attributs.Transaction
             else if (transactionStepList.First().Name != transactionStep)
             {
                 var stepFirst = transactionStepList.First();
-                context.Result = new RedirectResult(PreparerURL(guid, this._transactionName, stepFirst.Area, stepFirst.ControllerName, transactionStepList.First().ActionName), true);
+                context.Result = new RedirectResult(PreparerURL(guid, this._transactionName, stepFirst.Area, stepFirst.ControllerName, stepFirst.ActionName), true);
                 last_step = stepFirst.Name;
             }
             else
