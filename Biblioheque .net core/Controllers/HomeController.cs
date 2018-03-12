@@ -10,7 +10,7 @@ using NeatLib.Attributs.Transaction;
 namespace Biblioheque_.net_core.Controllers
 {
 
-    [TransactionName("AD40")]
+    [TransactionName("MaTransaction")]
     [TranactionStepList(typeof(TransactionStepSetter))]
     [TransactionValidator(typeof(int))]
     public class HomeController : Controller
